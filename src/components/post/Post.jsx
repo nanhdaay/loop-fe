@@ -77,7 +77,7 @@ const Post = ({post, userProfilePic}) => {
             </div>
             <div className="content">
                 <p>{post.desc}</p>
-                <img src={"/upload/"+ post.img} alt=""/>
+                <img src={"https://loop-be.onrender.com/uploads/"+ post.img} alt=""/>
             </div>
             <hr className="postHr"/>
             <div className="info">
