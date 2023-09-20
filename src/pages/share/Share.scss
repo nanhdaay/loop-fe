@@ -1,0 +1,120 @@
+@import "../../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Poppins&display=swap');
+
+.share {
+  @include themify($themes) {
+
+    background-image: url("../bluecow.svg");
+    color: themed("textColor");
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+
+    .container {
+      padding: 3vh;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+
+      .back{
+        padding: 1.1vh;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+
+      .share__post{
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          flex: 3;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          input {
+            border: none;
+            outline: none;
+            padding: 20px 10px;
+            background-color: transparent;
+            width: 100%;
+            color: themed("textColor");
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            
+          }
+        }
+        .right {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          .file {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 0px;
+          }
+        }
+      }
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            img {
+              height: 20px;
+            }
+
+            span {
+              font-size: 12px;
+              color: gray;
+            }
+          }
+        }
+        .right {
+          button {
+            border: none;
+            padding: 6px;
+            color: white;
+            cursor: pointer;
+            background-color: #000080;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+          }
+        }
+      }
+      }
+    }
+  }
+}

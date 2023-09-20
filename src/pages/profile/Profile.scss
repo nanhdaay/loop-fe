@@ -1,0 +1,109 @@
+@import "../../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Poppins&display=swap');
+
+
+
+.profile {
+  @include themify($themes) {
+    background-image: url("../bluecow.svg");
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    height: 100%;
+    background-size: cover;
+      width: 100%;
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+    
+
+    @include mobile {
+      padding: 0.1vw;
+      font-family: 'Poppins', sans-serif;
+      background-image: url("../bluecow.svg");
+      background-size: cover;
+      width: 100vw;
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .profileContainer {
+      padding: 20px 70px;
+
+      @include mobile {
+        padding: 0.1vw;
+      }
+
+      @include tablet {
+        padding: 20px;
+      }
+
+      .uInfo {
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        flex-direction: column; /* Adjust for mobile layout */
+
+        @include mobile {
+          align-items: center;
+          justify-content: center;
+          padding: 3vh;
+        }
+
+        .center {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Align items horizontally */
+          gap: 30px;
+          
+
+          .user-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            padding: 3vw;
+            color: black;
+            text-decoration: none;
+            align-items: center;
+            background-color: #F7FEFF;
+            width: 80vw;
+            height: 6vh;
+            border-radius: 3vw;
+            -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+            box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+
+              .dark-mode {
+                /* Adjust dark mode icon styles */
+                margin-right: 10px; /* Add some spacing to separate icons */
+              }
+    
+              .username {
+                font-weight: 900;
+                font-style: italic;
+                color: #555;
+                font-size: 22px;
+                
+              }
+    
+              }
+          }
+
+        }
+
+        .follow {
+          /* Your existing follow button styles */
+          button {
+            border: none;
+            background-color: #000080;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+

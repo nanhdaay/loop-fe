@@ -1,0 +1,25 @@
+@import "../../style.scss";
+
+.home{
+    @include themify($themes) {
+
+        background-image: url("../bluecow.svg");
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            background-attachment: fixed;
+        padding: 20px 70px;
+
+        @include mobile{
+            padding: 10px;
+            background-image: url("../bluecow.svg");
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+
+        @include tablet{padding: 20px;}
+
+    }
+}

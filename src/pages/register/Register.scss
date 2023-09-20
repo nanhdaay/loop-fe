@@ -1,0 +1,121 @@
+@import "../../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Poppins&display=swap');
+
+.register {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../bluecow.svg");
+  background-size: cover;
+  
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; // Align content at the top
+    margin-top: 30px; // Adjust as needed
+    flex: 1; // Take up half of the available vertical space
+    text-align: center; // Center the text
+    padding: 70px; // Add some padding
+    font-style: italic;
+
+    h1{
+      color: #555;
+      align-items: center;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1; // Take up the other half of the available vertical space
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 550px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    overflow: hidden;
+    margin-top: 2vh; // Adjust as needed
+    padding: 4vh; // Add some padding
+
+    .top {
+      background-size: cover;
+      padding: 20px; // Reduce padding for mobile
+      display: flex;
+      flex-direction: column; // Stack elements vertically on mobile
+      gap: 1vh; // Reduce gap for mobile
+      align-items: center;
+
+      span {
+        font-size: 12px;
+        color: #555;
+        font-family: "Poppins", sans-serif;
+      }
+
+      a{
+        text-decoration: none;
+        color: #000080;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+      }
+
+    }
+
+    .right {
+      padding: 20px; // Reduce padding for mobile
+      display: flex;
+      flex-direction: column;
+      gap: 20px; // Reduce gap for mobile
+      justify-content: center;
+
+      h1 {
+        color: #555;
+        text-align: center; // Center the text on mobile
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 15px 10px; // Adjust padding for mobile
+          font-family: "Poppins", sans-serif;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        button {
+          width: 100%; // Full-width button on mobile
+          padding: 10px;
+          border: none;
+          background-color: #000080;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    background-image: url("../bluecow.svg");
+    background-size: cover;
+    
+  }
+
+}

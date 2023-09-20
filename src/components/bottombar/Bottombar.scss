@@ -1,0 +1,65 @@
+@import "../../style.scss";
+
+.bottombar {
+  @include themify($themes) {
+    display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border: 1px solid themed("border");
+      border-radius: 10px;
+      width: 15vw;
+      padding: 10px;
+      position: fixed; 
+      bottom: 5vh; 
+      left: 43vw;
+      background-color: white;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur;
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+  }
+
+  /* Mobile screen styles */
+  @include mobile {
+    width: 100%; /* Full width for mobile screens */
+    justify-content: space-between; /* Distribute icons evenly */
+    padding: 10px; /* Add some padding for better touch interaction */
+    height: 60px; /* Adjust the height as needed */
+
+    @include themify($themes) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid themed("border");
+        border-radius: 10px;
+        width: 60vw;
+        padding: 2vw;
+        position: fixed; 
+        bottom: 3vh; 
+        left: 20vw;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur;
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        
+    }
+  }
+}
+ 

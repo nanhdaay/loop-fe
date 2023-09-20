@@ -1,0 +1,107 @@
+@import "../../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,900&display=swap');
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding: 10px 20px;
+      height: 50px;
+      background-color: themed("bg");
+      color: themed("textColor");
+      position: sticky;
+      top: 0;
+      margin: 2vh 0.05vw;
+      z-index: 1000;
+      gap: 10vw;
+  
+      .name {
+        flex: 1;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        
+      }
+    
+      .searchicon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .icon{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          border: 1.5px solid black;
+
+        }}
+
+  @include mobile {
+    width: 100%; /* Full width for mobile screens */
+    justify-content: space-between; /* Distribute icons evenly */
+    padding: 10px; /* Add some padding for better touch interaction */
+    height: 60px; /* Adjust the height as needed */
+    
+
+    @include themify($themes) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding: 10px 20px;
+      height: 50px;
+      background-color: themed("bg");
+      color: themed("textColor");
+      position: sticky;
+      top: 0;
+      margin: 2vh 0.05vw;
+      z-index: 1000;
+      gap: 10vw;
+  
+      .name {
+        flex: 1;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        
+      }
+    
+      .searchicon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .icon{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          border: 1.5px solid black;
+
+        }
+
+
+      }
+    }
+  }
+
+  }}
