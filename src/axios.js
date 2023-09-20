@@ -1,6 +1,6 @@
-import axios from "axios"
+import axios from "axios";
 
 export const makeRequest = axios.create({
-    baseURL:"http://localhost:6868/api/",
-    withCredentials: true,
+  baseURL: "https://loop-be.onrender.com/api/",
+  withCredentials: true,
 });
